@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 자식선택자 */
+        .sub>h1 {
+            color: blue;
+        }
+        /* 자손선택자 */
+        .container>h1 {
+            border: 5px solid;
+        }
+        /* 자식관계가 아니라서 선택이 되지 않음 */
+
+        .container h1 {
+            background-color: aqua;
+        }
+        /* 스페이스는 얼마나 멀리 떨어진 세대이든 상관없이 조상중에 있기만 하면 선택자 가능하다 */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sub">
+            <h1>Lorem.</h1>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

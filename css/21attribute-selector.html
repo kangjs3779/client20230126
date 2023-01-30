@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 {
+            color: blue;
+        }
+        /*title 속성이 있는 요소들  */
+        [title] {
+            text-decoration: underline;
+        }
+        /* title 속성이 있는 p요소들 = 반드시 붙어있어야 적용 가능 */
+        p[title] {
+            border: 5px solid;
+        }
+        /* h1을 조상으로 둔 title속성이 있는 요소들 = 떨어져있어도 상관없음, 형제 요소만 아니면 된다 */
+        h1 [title] {
+            border: 5px dotted;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem <span title="inside"> dolor</span> sit.</h1>
+    <h1 title="hello">Lorem.</h1>
+    <h1 title="world">Vitae.</h1>
+    <h1>Consequuntur?</h1>
+    <h1>Doloribus.</h1>
+    <h1>Itaque.</h1>
+    <p title="hi css">Lorem ipsum dolor sit amet consectetur.</p>
+    <p>Quo, consectetur reprehenderit? Incidunt, repudiandae placeat?</p>
+    <p>Alias nobis at dignissimos. Maiores, voluptatibus.</p>
+</body>
+</html>
