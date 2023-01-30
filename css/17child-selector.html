@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        li {
+            text-decoration: underline;
+        }
+        /* 자식선택자 */
+        ul>li {
+            color: blue;
+
+        }
+/* li element를 선택할 건데 부모요소가 todo인 것의 li요소를 선택하겠다 */
+        .todo>li {
+            background-color: brown;
+
+        }
+        .note>li {
+            text-align: right;
+        }
+        /* 부모요소가 note인 li요소를 오른쪽으로 정렬하겠다  */
+
+        ol li {
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <ul class="todo">
+        <li>Lorem.</li>
+        <li>Eveniet.</li>
+        <li>Exercitationem!</li>
+    </ul>
+    <ul class="note">
+        <li>Lorem.</li>
+        <li>Nostrum.</li>
+        <li>Necessitatibus.</li>
+    </ul>
+    <ul>
+        <li>Lorem.</li>
+        <li>Provident.</li>
+        <li>Distinctio.</li>
+    </ul>
+
+    <ol>
+        <li>d</li>
+        <li>d</li>
+        <li>d</li>
+        <li>d</li>
+    </ol>
+
+   
+</body>
+</html>

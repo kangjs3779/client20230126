@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <!-- id속성 작성 규칙 -->
+    <!-- 숫자로 시작하면 안됨 -->
+    <!-- 빈칸 넣을 수 없음 -->
+    <!-- 대소문자 구분함 -->
+    <!-- 한 페이지에 같은 id를 여러번 사용할 수 없음 -->
+    <!-- 특수문자는 -,_만 사용 -->
+
+    <!-- 아래 코드는 숫자로 시작해서 안됨 -->
+    <h1 id="3head">Lorem, ipsum dolor.</h1>
+
+    <!-- id속성에 빈칸안됨 -->
+    <h1 id="my head">Lorem, ipsum dolor.</h1>
+
+    <!-- 언더바는 된다 -->
+    <h1 id="my_name">Lorem, ipsum dolor.</h1>
+    <h1 id="my-name">Lorem, ipsum dolor.</h1>
+
+    <!-- 대소문자 구분해서 두개는 다른 id임 -->
+    <h1 id="yourhead">Lorem, ipsum dolor.</h1>
+    <h1 id="Yourhead">Facere, fugit consequatur?</h1>
+    
+    <!-- 같은 id를 반복사용하면 안된다. -->
+    <h1 id="hishead">Lorem, ipsum dolor.</h1>
+    <h1 id="hishead">Lorem, ipsum dolor.</h1>
+</body>
+</html>
