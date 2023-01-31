@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,4 +29,36 @@
     <h1 class="note">Lorem, ipsum dolor.</h1>
     <h1 class="note error">Lorem, ipsum dolor.</h1>
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 {
+            border: 5px solid;
+        }
+
+        h1.note {
+            border: 5px dotted blue;
+        }
+        /* 좀 더 특징적이고 자세하게 설명 할 수록 우선순위가 더 높음 */
+        h1.note.error {
+            border: 5px dotted black
+        }
+        /* specificity 마우스를 올려보면 selector specificity가 나온다 */
+        /* element selector는 1점 */
+   s     /* class selector는 10점 */
+        /* id selector는 100점 */
+
+        h1.note.error {
+            border: 5px outset;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem, ipsum dolor.</h1>
+    <h1 class="note">Lorem, ipsum dolor.</h1>
+    <h1 class="note error">Lorem, ipsum dolor.</h1>
+</body>
+>>>>>>> 29609b2d0ff9077262027d0c6ef91838f60b6dec
 </html>

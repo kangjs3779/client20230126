@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .ite {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            background-color: brown;
+            width: 20px;
+            height: 70px;
+            padding: 5px;
+            margin: 10px;
+            border: 10px solid black;
+        }
+
+        .ite:nth-child(odd) {
+            background-color: coral;
+            border: 10px solid gray;
+        }
+
+        .box {
+            background-color: darkslateblue;
+            display: flex;
+            height: 300px;
+            border: 10px solid black;
+        }
+    </style>
+</head>
+<body>
+<!-- flexbox의 자식요소는 가로축 기준으로 배치됨 (자식만 된다 손자는 안된다)-->
+    <div class="box">
+        <div class="ite">1</div>
+        <div class="ite">2</div>
+        <div class="ite">3</div>
+        <div class="ite">4</div>
+        <div class="ite">5</div>
+    </div>
+
+</body>
+</html>

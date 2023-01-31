@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,4 +44,51 @@
     <p class="note error">Tempore aperiam ducimus odio ex earum non asperiores veritatis voluptatem, ipsa tenetur explicabo quisquam iusto iste facere eum, cupiditate error fugit omnis corrupti beatae quas, reprehenderit exercitationem? In, praesentium dolorem.</p>
 
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 {
+            color: blue;
+        }
+
+        p {
+            color: brown;
+        }
+
+        /* 선택자를 띄어쓰기 없이 연속해서 작성하면 모든 조건을 만족하는 요소 선택 */
+        p.note {
+            background-color: yellow;
+        } 
+        /* element가 p이면서 class이름이 note인 것 */
+        p.error {
+            text-decoration: line-through;
+        }
+
+        p.error.note {
+            border : 5px solid
+        }
+        /* element가 p이면서 class이름이 error, note 둘 다 인 것 */
+
+        .note.error {
+            border: 10px dotted black;
+        }
+
+        h1.error { 
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 class="note">Lorem, ipsum dolor.</h1>
+    <h1 class="note">Ut, blanditiis ducimus.</h1>
+    <h1 class="note error">Distinctio, voluptate suscipit!</h1>
+    <p class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. A consectetur provident minus iusto odit vel repellat quia voluptate, rem minima, temporibus animi similique dolorum praesentium illo natus doloribus! Quam, minima.</p>
+    <p class="note error">Iusto natus cumque quam doloremque similique sit dignissimos provident dicta asperiores eos, quisquam atque porro sint sunt possimus quibusdam. Officia, vel debitis! Sed officia dolore laudantium perferendis possimus laborum atque.</p>
+    <p class="note error">Tempore aperiam ducimus odio ex earum non asperiores veritatis voluptatem, ipsa tenetur explicabo quisquam iusto iste facere eum, cupiditate error fugit omnis corrupti beatae quas, reprehenderit exercitationem? In, praesentium dolorem.</p>
+
+</body>
+>>>>>>> 29609b2d0ff9077262027d0c6ef91838f60b6dec
 </html>
