@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        h1 {
+            background-color: yellow;
+        }
+
+        h1:nth-child(odd) {
+            background-color: red;
+        }
+
+        #head1 {
+            /* 포지션된 요소가 아니다 = 위치가 변경되지 않은 요소 */
+            position: static;
+            left: 50px;
+        }
+
+        #head2 {
+            /* 원래 위치를 기준으로 포지션 가능 */
+            /* 원래 위치를 기준으로 멀어지는 것!!! */
+            position: relative;
+            left: 50px;
+        }
+
+        #head3 {
+            position: relative;
+            bottom: 30px;
+
+        }
+
+        #head4 {
+            position: relative;
+            right: 10px;
+        }
+
+        #head5 {
+            position: relative;
+            top: 20px;
+
+        }
+
+        #head6:hover {
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+
+        #head7:hover {
+            position: relative;
+            bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head1">
+        Lorem, ipsum dolor.
+    </h1>
+    <h1 id="head2">
+        Officiis, provident veniam!
+    </h1>
+    <h1 id="head3">
+        Soluta, tempore repudiandae.
+    </h1>
+    <h1 id="head4">
+        Suscipit, ea officiis.
+    </h1>
+    <h1 id="head5">
+        Accusantium, ipsa aspernatur!
+    </h1>
+    <h1 id="head6">
+        Eveniet, velit non.
+    </h1>
+</body>
+</html>
