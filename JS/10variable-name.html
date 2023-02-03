@@ -6,39 +6,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        #box1 {
-            /* position: relative; */
-            width: 400px;
-            height: 400px;
-            
-        }
-
-        #head4 {
-            width: 400px;
-            height: 400px;
-            border: 3px solid yellow;
-        }
-
-        #head5 {
-            border: 3px solid green;
-            width: 100px;
-            height: 100px;
-            position: absolute;
-            bottom: 200px;
-            right: 100px;
-        }
     </style>
 </head>
 <body>
-    <div id="box1">
-        <div id="head4">
-            4
-        </div>
-        <div id="head5">
-            5
-        </div>
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    //변수명 작성 규칙
+    //영문 대소문자, 숫자, _, $ 이렇게만 사용 가능함
+    //관습이 있기 때문에 그것에 맞춰서 쓰면 된다
+    
+    const $ = 3;
+    console.log($);
+    
+    let _ = 9;
+    console.log(_);
+    _ = 11;
+    console.log(_);
+    
+    let hello = "hi";
+    let hello_ = "greeting";
+    let HELLO = "hola";
+    
+    // 변수명 작성 관습
+    //lowerCamerlcase : 소문자로 시작하고
+    //여러단어가 조합될 경우 두번째 이후 단어의 앞글자만 대문자로
+    //이런 것을 위에 단어로 말한다
+    //대문자로 시작하면 uppercamelcase
+    //-를 사용해서 하면 케밥케이스
+    //소문자만 사용하면 스네이크케이스
+
+    let car_name = "kia" //되긴하지만 관습에 어긋남
+    console.log(car_name);
+
+    let carName = "hyundai"
+    console.log(hyundai);
+   
+    </script>
 </body>
 </html>

@@ -6,39 +6,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        #box1 {
-            /* position: relative; */
-            width: 400px;
-            height: 400px;
-            
-        }
-
-        #head4 {
-            width: 400px;
-            height: 400px;
-            border: 3px solid yellow;
-        }
-
-        #head5 {
-            border: 3px solid green;
-            width: 100px;
-            height: 100px;
-            position: absolute;
-            bottom: 200px;
-            right: 100px;
-        }
     </style>
 </head>
 <body>
-    <div id="box1">
-        <div id="head4">
-            4
-        </div>
-        <div id="head5">
-            5
-        </div>
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    // object(객체) : 여러 값(속성 property)를 갖는 data type
+    let name = "john"; //하나의 값
+    let age = 30; // 하나의 값
+
+
+    let a = {name: "jane", age: 30}
+    //a객체는 name속성과 age 속성을 같는다. // 여러 값
+        console.log(name);
+        console.log(age);
+
+        console.log(a.name); //jane
+        console.log(a.age); //40
+
+        name = "donald"
+        console.log(name);//donald
+        a.name = "trump"        
+        
+        name = "trump"
+        console.log(name);//trump
+        a.name = "trump"
+
+        a.addreddss = "seoul";
+        console.log(a.address);
+        
+        console.log(a.birth); //undefined
+
+
+    
+
+        a.age = "50"/
+        console.log(a.age); // 50
+    </script>
 </body>
 </html>
