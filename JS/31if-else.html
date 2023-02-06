@@ -12,38 +12,22 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    let a = 3;
-    console.log(a);
+    let a = prompt("수를 입력하세요", 0);
+    a = Number(a);
 
-    a = 5;
-    console.log(a);
-
-    a=0.11111;
-    console.log(a);
-
-    //-(2^53 - 1)~ ~ (2^53 - 1)
-    a = 9007199254740991; //최대푠현 가능 정수
-    console.log(a);
-
-    let b = a + 1;
-    console.log(b);
-
-    //Infinity
-    let d = 1 / 2; //infinity
-    console.log(d);
-    let e = 1 / 0; // Infinity
-    console.log(e);
-    let f = -1 / 0; // -Infinity
-    console.log(f);
-
-    //NaN(Not a Number)
-    let g = 15 % 2; //1
-    console.log(g);
-
-    let h = 15 % 0; //NaN
-    console.log(h);
+    let remain = a % 2;
     
-
+    if (remain === 0) {
+        console.log("짝수입니다.");
+    } else {
+        console.log("홀수입니다.");
+    }
+    
+    /*
+    if ((a %2) ===0 {
+        console.log("짝수")
+    }) */ 
+    // 위에처럼 적어도 된다. 간결한 코드
     </script>
 </body>
 </html>

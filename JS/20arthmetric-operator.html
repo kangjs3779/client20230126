@@ -12,37 +12,23 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+    //피연산자가 하나인 산술연산자 (unary) 
+    //binary
+    //+, -, ++, --
     let a = 3;
-    console.log(a);
+    let b = +a; // a의 부호를 바꾸지 않은 결과
+    console.log(b); // 3
 
-    a = 5;
-    console.log(a);
+    let c = -a; //a의 부호를 바꾼다
+    console.log(c); //-3
 
-    a=0.11111;
-    console.log(a);
+    let d = "3";
+    let e = 3 + d; "33"
+    console.log(e); // "33"
 
-    //-(2^53 - 1)~ ~ (2^53 - 1)
-    a = 9007199254740991; //최대푠현 가능 정수
-    console.log(a);
+    let f = 3 + (+d) // string을 숫자로 바꿔준다 6
+    console.log(f); // 6
 
-    let b = a + 1;
-    console.log(b);
-
-    //Infinity
-    let d = 1 / 2; //infinity
-    console.log(d);
-    let e = 1 / 0; // Infinity
-    console.log(e);
-    let f = -1 / 0; // -Infinity
-    console.log(f);
-
-    //NaN(Not a Number)
-    let g = 15 % 2; //1
-    console.log(g);
-
-    let h = 15 % 0; //NaN
-    console.log(h);
-    
 
     </script>
 </body>

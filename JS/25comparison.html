@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    </style>
+</head>
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    //비교연산자의 피연산자가 string
+    //문자의 코드로 비교(사전순과 유사)
+
+    let a = "java";
+    let b = "js";
+
+    console.log(a === b); //false
+    console.log(a !== b); //true
+    console.log(a ==="java"); // true 갑과 타입이 같은가?
+    console.log(a ==="JAVA"); //false
+
+    let c = "c";
+    let d = "d";
+
+    console.log(c<d); //true d의 사전페이지가 더 크니까
+    console.log(c>d); // flase
+
+    console.log(c<"can"); //true
+    console.log(c<"C"); // false (unicode 비교)
+
+    //다른 타입과 비교 (두 항을 number로 변환 후 비교)
+    //다른 타입과의 비교는 헷갈리니까 가능한 피할 것
+    //타입을 변경한 이후에 비교를 할 것
+    console.log("3" < 4); // 타입이 서로 다름 -> 숫자로 변환 -> true
+    console.log("5" < 4); // false
+    console.log("11" < "2"); // true 사전으로 비유하면 1이 더앞이니까 맞음
+    console.log("11" < 2); // false
+
+    let e = "11";
+    let f = 2;
+
+    //비교하기 전 타입 변환
+    let g = +e; //"11"을 11로 변환
+    console.log(g < f); //number끼리 비교
+
+    let h = "" + f; // 2를 "2"로 변환 , 타입을 string으로 변환
+    console.log(e < h); //string끼리 비교
+
+
+
+    </script>
+</body>
+</html>

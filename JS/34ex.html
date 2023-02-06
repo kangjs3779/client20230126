@@ -10,39 +10,31 @@
 </head>
 <body>
 
+    <input type="text"> <button onclick="guess()">입력</button>
+    <p id="result"></p>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    let a = 3;
-    console.log(a);
+    // 컴퓨터가 1-100사이의 수 선택
 
-    a = 5;
-    console.log(a);
+    let com = parseInt(Math.random() * 100) + 1;
 
-    a=0.11111;
-    console.log(a);
+    function guess() {
+        let user = document.querySelector("input").value;
+        user = Number(user);
 
-    //-(2^53 - 1)~ ~ (2^53 - 1)
-    a = 9007199254740991; //최대푠현 가능 정수
-    console.log(a);
+        let message = "";
 
-    let b = a + 1;
-    console.log(b);
-
-    //Infinity
-    let d = 1 / 2; //infinity
-    console.log(d);
-    let e = 1 / 0; // Infinity
-    console.log(e);
-    let f = -1 / 0; // -Infinity
-    console.log(f);
-
-    //NaN(Not a Number)
-    let g = 15 % 2; //1
-    console.log(g);
-
-    let h = 15 % 0; //NaN
-    console.log(h);
-    
+        if (user < com) {
+            message = "더 큰 수를 입력해보세요.";
+        } else if (user > com) {
+            message = "더 작은 수를 입력해보세요."
+        } else {
+            message = "정답입니다.😎" //이모티콘 윈도우+.
+        }
+        
+        document.querySelector("#result").textContent = message;
+    }
 
     </script>
 </body>

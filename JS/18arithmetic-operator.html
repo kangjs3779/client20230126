@@ -12,37 +12,55 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    let a = 3;
-    console.log(a);
+    //산술연산자
+    //+, *, -, /, %, **
+    let a = 33;
+    let b = 55;
+    let c = a + b;
+    console.log(c); //88
 
-    a = 5;
-    console.log(a);
+    let d = 3 + 5;
+    console.log(d); //8
 
-    a=0.11111;
-    console.log(a);
+    let e = 3 + b;
+    console.log(e); // 58
 
-    //-(2^53 - 1)~ ~ (2^53 - 1)
-    a = 9007199254740991; //최대푠현 가능 정수
-    console.log(a);
+    console.log(3 + 5); // 8
 
-    let b = a + 1;
-    console.log(b);
+    let f = 99-77;
+    console.log(f); // 22
 
-    //Infinity
-    let d = 1 / 2; //infinity
-    console.log(d);
-    let e = 1 / 0; // Infinity
-    console.log(e);
-    let f = -1 / 0; // -Infinity
-    console.log(f);
+    let g = 3 * 5;
+    console.log(g); // 15
 
-    //NaN(Not a Number)
-    let g = 15 % 2; //1
-    console.log(g);
+    let h = 5 / 3;
+    console.log(h); // 1.666
 
-    let h = 15 % 0; //NaN
-    console.log(h);
-    
+    let i = 5 * 2 + 3;
+    console.log(i); // 13
+
+    let j = 3 + 5 * 2;
+    console.log(j); //13
+
+    // % : remainder(modulo, modulus) 나머지 연산
+    let k = 5/3 ;
+    console.log(k);
+
+    let l = 5 % 3; //5를 3으로 나눈 후의 나머지
+    console.log("l", l); //2
+
+    let m = 33 % 2;
+    console.log(m); // 1
+    let n = 44 % 2;
+    console.log(n); //0
+
+    // ** : exponencial(지수)
+    let o = 2 **3; // 2*2*2 = 8
+    console.log(o);
+
+    let p = 3 **2 // 3*3 = 9
+    console.log(p);
+
 
     </script>
 </body>

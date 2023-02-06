@@ -12,37 +12,22 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    let a = 3;
-    console.log(a);
+    //Math.random()
+    //0 <= Math.random() < 1 수를 임의로 리턴함
 
-    a = 5;
-    console.log(a);
+    //parseInt(숫자) = 정수로 반환함 (소수점을 버려버린다)
 
-    a=0.11111;
-    console.log(a);
+    let a = Math.random();
+    console.log(a); // 0.0 <= a <1.0
 
-    //-(2^53 - 1)~ ~ (2^53 - 1)
-    a = 9007199254740991; //최대푠현 가능 정수
-    console.log(a);
+    a *=100;
+    console.log(a); // 0.0 <= a < 100 ---> 0 <= a <= 99
 
-    let b = a + 1;
-    console.log(b);
+    a = parseInt(a);
 
-    //Infinity
-    let d = 1 / 2; //infinity
-    console.log(d);
-    let e = 1 / 0; // Infinity
-    console.log(e);
-    let f = -1 / 0; // -Infinity
-    console.log(f);
-
-    //NaN(Not a Number)
-    let g = 15 % 2; //1
-    console.log(g);
-
-    let h = 15 % 0; //NaN
-    console.log(h);
+    console.log(a); // 0.0 <= a < 100 ---> 0 <= a <= 99
     
+    // 0 <= a <= 100
 
     </script>
 </body>

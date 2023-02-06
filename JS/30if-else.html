@@ -12,38 +12,15 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    let a = 3;
-    console.log(a);
+    let age = prompt("나이를 입력해주세요", 0)
 
-    a = 5;
-    console.log(a);
+    age = Number(age); //number로 변환 대문자 조심
 
-    a=0.11111;
-    console.log(a);
-
-    //-(2^53 - 1)~ ~ (2^53 - 1)
-    a = 9007199254740991; //최대푠현 가능 정수
-    console.log(a);
-
-    let b = a + 1;
-    console.log(b);
-
-    //Infinity
-    let d = 1 / 2; //infinity
-    console.log(d);
-    let e = 1 / 0; // Infinity
-    console.log(e);
-    let f = -1 / 0; // -Infinity
-    console.log(f);
-
-    //NaN(Not a Number)
-    let g = 15 % 2; //1
-    console.log(g);
-
-    let h = 15 % 0; //NaN
-    console.log(h);
-    
-
+    if (age>=20) {
+        console.log("어른입니다");
+    } else {
+        console.log("어른이 아닙니다");
+    }
     </script>
 </body>
 </html>
