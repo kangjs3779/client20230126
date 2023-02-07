@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    </style>
+</head>
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    let a = 0; //while 밖에 있어도 사용 가능하다
+    while (a < 5) {
+        console.log("a", a);
+        a++;
+    }
+    //1-4까지 출력 된다
+    console.log("a", a); //5가 출력된다
+
+    for (let b = 0; b < 5; b++) {
+        console.log("b", b);
+    }
+    //1-4까지 출력된다
+
+    console.log("b", b); //5는 출력되지 않음
+    //for문에 있는 초기화 조건은 밖에서 사용할 수 없음
+
+    let c;//선언을 밖에 해버리면
+    for (c = 0; c < 5; c++) {
+        console.log("c", c);
+    }
+    console.log("c", c); //이것도 5로 출력 가능함
+
+    </script>
+</body>
+</html>
