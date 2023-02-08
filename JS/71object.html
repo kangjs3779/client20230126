@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    </style>
+</head>
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    //객체의 propery 이름은 lowerCamelcase로 작성하면 된다
+    let a = {
+        address: "seoul", 
+        age: 55, 
+        bookTitle: "spring"
+    };
+    //property 앞에서 엔터를 치면 가독성이 좋아진다
+    
+    console.log(a.address);
+    console.log(a.age);
+    console.log(a.bookTitle);
+    //코드 순서대로 출력이 된다
+
+    //값을 바꿀 수도 있다
+    a.address = "jeju";
+    //a라는 객체의 address라는 property
+    console.log(a.address);
+
+    let b = a.age;
+    a.age = 66;
+    console.log(b); //변경되기 전의 age값이 할당되는 것이다 
+    //왜냐하면 let b가 변경된 age보다 위에 있기 때문에 변경 전의 값이 할당되는 것이다
+    //둘의 순서를 바꾸면 let b도 값이 66이 된다
+    //코드 순서에 따라서 값이 달라진다 왜냐하면 결과값 출력은 코드 순서대로 되니까
+    console.log(a.age);
+    //값이 변경되어서 55가 아니라 66이 출력이 된다
+
+    console.log(a.job); //존재하지 않는 property
+    //오류가 나지는 않고 undefined가 나온다
+
+    a.job = "teacher";
+    //값을 할당하면 된다
+    console.log(a.job);
+    //이제 teacher라고 답이 뜬다
+    </script>
+</body>
+</html>
