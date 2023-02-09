@@ -9,31 +9,34 @@
     </style>
 </head>
 <body>
-
+    <h1>
+        Lorem.
+    </h1>
+    <h1>
+        Hic?
+    </h1>
+    <div id="res"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    //first-class function
-    //. 데이터 구조에 저장 가능
-    //. 인수로 전달 가능 하다
-    //. 변수에 할당 가능
+    let heads = document.querySelectorAll("h1");
+    let text = "";
     
-    //. 값으로 반환 가능
-    function a() {
-        function b() {
-            console.log("b함수 실행...");
-        }
-
-        return b;
+    for (let i = 0; i < heads.length; i++) {
+        text += heads[i].textContent;
     }
-
+    // 반복문 사용 할거야
+    // i라는 애를 만들어서 0부터 시작을 할거야
+    // i는 heads라는애의 배열 길이보다 작을 때까지만 반복할거야
+    // 그리고 그때까지는 1씩더해줄거야
+    // 그리고 그떄까지 반복할 때마다 text랑 heads의 배열아이템을 더해줄거야
     
-    let c = a(); //함수a의 값을 할당 받은 것이고
-    let d = a; //함수a의 선언을 할당 받은 것
-    c(); //함수a값(=b)을 할당 받음 그래서 함수b와 같은 것이 되었음 그리고 함수b는 실행 코드가있어서 그걸 실행시켜 결과값이 나옴
-    d(); //함수a가 할당 되었으므로 결과값아나옴 함수a는 함수b를 정의만 했으니까
-    a(); //함수를 정의하는 것만으로는 일을 하지 않음 
-         //b함수를 정의를 했을 뿐 실행 코드는 없기 때문에 나타나는 결과값은 없다
-    //화살표로 정리해서 이해할 것
+    document.getElementById("res").textContent = text;
+    //위에 있는 반복문을 브라우저에 보여주고싶어
+    //document를 통해서 자손요소에 접근할거야
+    //그리고 아이디를 통해서 특정요소에 접근할거야 근데 get이라서 css언어 못써
+    //그리고 textContent로 브라우저에 출력할거야
+    //뭘 출력할거냐면 text를 출력할건데 그건 반복을 한 값을 말하는 거야
+
     </script>
 </body>
 </html>

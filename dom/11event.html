@@ -9,22 +9,34 @@
     </style>
 </head>
 <body>
+    <h1 id="head1" class="note" onclick="console.log(999);"> 
+        <!-- 클릭을 할때마다 999가 출력! 된다 -->
+        Lorem.
+    </h1>
 
+    <h1 onclick="console.log(`hello`);">
+        <!-- 이벤트 attribute임 코드가 길어지면 함수로 적어서 호출하면 된다 -->
+        Lorem.
+    </h1>
+
+    <h1 onclick="console.log(`점심시간`); console.log(`밥먹자`);">
+        명령 여러개 가능.
+    </h1>
+    <!-- 자바스크립트와 html의 문법이 섞이면 해석하기가 엄청 불편하다 -->
+
+    <h1 onclick="myfunc()">
+        자바를 따로씀.
+    </h1>
+
+    <h1 ondblclick="console.log(`더블클릭된다`);">
+        더블클릭.
+    </h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-
-    //method : 객체가 가진 함수
-    let a = {
-        name: "kim",
-        age: 44,
-        drive: function() {
-            console.log("drive 함수 실행");
-        }
-    };
-    //drive: = property name
-    //객체는 property와 method로 이루어져있다
-    console.log(a.name);
-    console.log(a.age);
+    function myfunc() {
+        console.log("함수실행중");
+        console.log("여러개의 명령문을 작성한다");
+    }
     </script>
 </body>
 </html>

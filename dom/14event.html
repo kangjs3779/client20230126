@@ -9,22 +9,32 @@
     </style>
 </head>
 <body>
+    <!-- //입력이 되면 그값이 계속 저장된다 -->
+    <input type="text" id="input1">
+    <button onclick="addList()">추가</button>
+    <ul id="list1">
+        <li>
+            Lorem.
+        </li>
+        <li>
+            Distinctio.
+        </li>
+    </ul>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-
-    //method : 객체가 가진 함수
-    let a = {
-        name: "kim",
-        age: 44,
-        drive: function() {
-            console.log("drive 함수 실행");
+        function addList() {
+            //1. #input1 의 value얻기
+            let text = document.querySelector("#input1").value;
+            //2. 새 li요소 만들고
+            let li = document.createElement("li");
+            //3. 새 li 요소의 textContent를 1에서 얻은 값으로 할당
+            li.textContent = text;
+            //4. #list1 요소 얻기
+            let ul = document.querySelector("#list1");
+            //5. 4에서 얻은 요소에 2에서 만든 요소 append하기
+            ul.append(li);
         }
-    };
-    //drive: = property name
-    //객체는 property와 method로 이루어져있다
-    console.log(a.name);
-    console.log(a.age);
     </script>
 </body>
 </html>

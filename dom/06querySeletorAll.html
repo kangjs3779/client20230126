@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    </style>
+</head>
+<body>
+    <h1 id="head1">
+        Lorem.
+    </h1>
+    <h1 id="head2" class="note">
+        Delectus.
+    </h1>
+    <h1 id="head3" class="note">
+        Et.
+    </h1>
+    <h1 id="head4">
+        Beatae.
+    </h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    let heads = document.querySelectorAll("h1")
+
+    for (let i = 0; i < heads.length; i++) {
+        console.log(heads[i].textContent);
+    }
+
+    //note 클래스인 요소의 객체를 dom에서 가져와서 요소들의 textContent를 출력하기
+    //querySelectorAll 메소드 사용해보기
+    let heads2 = document.querySelectorAll(".note")
+    //document를 사용해서 자손요소에 접근을 해볼거야
+    //내가 부르는 이름을 가진 모든 애들을 다 부를거야
+    //그리고 이렇게 부르는 걸 heads2라고 부를 거야
+
+    for (let i = 0; i < heads2.length; i++) {
+        console.log(heads2[i].textContent);
+    }
+    //반복문을 사용할거야
+    // 일단 0부터 시작을 할거야
+    // 그리고 heads2라는 애의 배열 길이보다 작을 때까지만 반복할거야
+    // 그리고 매번 1씩 더해줄거야
+    // 그리고 그 결과를 heads2에 배열 순서에 넣을거야
+    //그리고 그 순서에 맞게 있는 배열아이템의 내용을 출력할거야
+    </script>
+</body>
+</html>

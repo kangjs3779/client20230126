@@ -9,22 +9,16 @@
     </style>
 </head>
 <body>
+    <input type="text" id="input1" onkeyup="show();">
+    <div id="res"></div>
+    <!-- 키를 누르다가 손을 떼는 순간 츨력된다 -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-
-    //method : 객체가 가진 함수
-    let a = {
-        name: "kim",
-        age: 44,
-        drive: function() {
-            console.log("drive 함수 실행");
-        }
-    };
-    //drive: = property name
-    //객체는 property와 method로 이루어져있다
-    console.log(a.name);
-    console.log(a.age);
+    function show() {
+        let text = document.querySelector("#input1").value;
+        document.querySelector("#res").textContent = text ;
+    }
     </script>
 </body>
 </html>

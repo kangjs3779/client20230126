@@ -9,22 +9,20 @@
     </style>
 </head>
 <body>
+    <input type="text" id="input1">
+    <button onclick="show();">출력</button>
+    <!-- 함수의 이름을 적나봄 -->
+    <div id="res"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-
-    //method : 객체가 가진 함수
-    let a = {
-        name: "kim",
-        age: 44,
-        drive: function() {
-            console.log("drive 함수 실행");
+        function show() {
+            let input1 = document.querySelector("#input1");
+            console.log(input1.value);
+            document.querySelector("#res").textContent = input1.value;
+            
         }
-    };
-    //drive: = property name
-    //객체는 property와 method로 이루어져있다
-    console.log(a.name);
-    console.log(a.age);
+    
     </script>
 </body>
 </html>

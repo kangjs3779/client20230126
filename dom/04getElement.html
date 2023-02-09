@@ -9,22 +9,32 @@
     </style>
 </head>
 <body>
-
+    <h1 id="head1" class="note">
+        Lorem.
+    </h1>
+    <h1 id="head2" class="note error">
+        Provident!
+    </h1>
+    <h1 id="head3" class="note error">
+        Similique.
+    </h1>
+    <h1 id="head4" class="note">
+        Facilis?
+    </h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+    let elems1 = document.getElementsByClassName("note"); //클래스이름으로 요소를 얻어오겠다 여러개일 수 있어서 복수형
+    //여러개일때는 배열로 가져오면 된다.
+    for (let i = 0; i < elems1.length; i++) {
+        console.log(elems1[i].textContent);
+    }
 
-    //method : 객체가 가진 함수
-    let a = {
-        name: "kim",
-        age: 44,
-        drive: function() {
-            console.log("drive 함수 실행");
-        }
-    };
-    //drive: = property name
-    //객체는 property와 method로 이루어져있다
-    console.log(a.name);
-    console.log(a.age);
+    let elems2 = document.getElementsByClassName("error");
+    for (let i = 0; i < elems2.length; i++) {
+        console.log(elems2[i].textContent);
+    }
+
+    elems2[1].textContent = "안녕";
     </script>
 </body>
 </html>

@@ -13,18 +13,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
 
-    //method : 객체가 가진 함수
+    let name = "철수";
+    let age = 7;
+
     let a = {
-        name: "kim",
-        age: 44,
-        drive: function() {
-            console.log("drive 함수 실행");
+        name: "짱구",
+        age: 5,
+        country: "japan",
+        describe: function() {
+            console.log("제 이름은" + this.name + "이고 제 나이는" + this.age + "살 입니다.");
         }
-    };
-    //drive: = property name
-    //객체는 property와 method로 이루어져있다
-    console.log(a.name);
-    console.log(a.age);
+    } 
+
+    a.describe();
     </script>
 </body>
 </html>

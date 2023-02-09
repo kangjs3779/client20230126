@@ -10,21 +10,26 @@
 </head>
 <body>
 
+    <button id="button1" onclick="btnClick1()">1버튼 클릭</button>
+    <button id="button2">2버튼 클릭</button>
+    <button id="button3">3버튼 클릭</button>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+    function btnClick1() {
+        console.log("1번클릭됨");
+    }
 
-    //method : 객체가 가진 함수
-    let a = {
-        name: "kim",
-        age: 44,
-        drive: function() {
-            console.log("drive 함수 실행");
-        }
-    };
-    //drive: = property name
-    //객체는 property와 method로 이루어져있다
-    console.log(a.name);
-    console.log(a.age);
+    let btn2 = document.querySelector("#button2");
+    btn2.onclick = function() {
+        console.log("2버튼 클릭됨");
+    }
+
+    let btn3 = document.querySelector("#button3");
+    btn3.addEventListener("click", function() {
+        console.log("3번 클릭 됨");
+    });
+
     </script>
 </body>
 </html>

@@ -9,22 +9,30 @@
     </style>
 </head>
 <body>
+    <ul id="list1">
+        <li>
+            Lorem.
+        </li>
+        <li>
+            Ut.
+        </li>
+    </ul>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
 
-    //method : 객체가 가진 함수
-    let a = {
-        name: "kim",
-        age: 44,
-        drive: function() {
-            console.log("drive 함수 실행");
-        }
-    };
-    //drive: = property name
-    //객체는 property와 method로 이루어져있다
-    console.log(a.name);
-    console.log(a.age);
+    let text = "";
+    do {
+        a = prompt("새 목록을 작성하세요", "study");
+        let li = document.createElement("li");
+        li.textContent = a;
+
+        document.querySelector("#list1").append(li);
+    } while (a !== "exit");
+
+    //뜨는 창에 내가 입력한 값이 리스트로 추가되는것
+    //그리고 exit이라고 치면 뜨는 창에서 나가짐
+    
     </script>
 </body>
 </html>

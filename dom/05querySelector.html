@@ -9,22 +9,33 @@
     </style>
 </head>
 <body>
+    <h1 id="head1">
+        Lorem.
+    </h1>
+    <h1 id="head2" class="note">
+        Magni.
+    </h1>
+    <h1 id="head3" class="note">
+        Quam!
+    </h1>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+        //css문법으로 선택자를 선택함
+    let elem1 = document.querySelector("#head1");
+    console.log(elem1.textContent);
 
-    //method : 객체가 가진 함수
-    let a = {
-        name: "kim",
-        age: 44,
-        drive: function() {
-            console.log("drive 함수 실행");
-        }
-    };
-    //drive: = property name
-    //객체는 property와 method로 이루어져있다
-    console.log(a.name);
-    console.log(a.age);
+    let elem2 = document.querySelector("#head2");
+    console.log(elem2.textContent);
+
+    let elem3 = document.querySelector(".note");
+    //note클래스를 가진애가 두개인데 위에 있는 하나만 출력이 된다 ?????? 제일 상단에 있는 애만 출력된다
+    console.log(elem3.textContent);
+
+    let elem4 = document.querySelector("h1");
+    console.log(elem4.id); //아이디의 이름이 출력이 된다
+
+
     </script>
 </body>
 </html>
