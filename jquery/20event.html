@@ -9,32 +9,43 @@
     </style>
 </head>
 <body>
-    <input type="text" id="input1">
-    <ul id="list1"></ul>
-
-    <hr>
-
-    <input type="text" id="input2">
-    <ul id="list2"></ul>
+    <button id="button1">클릭1</button>
+    <button id="button2">클릭2</button>
+    <button id="button3">오른쪽 클릭3</button>
+    <button id="button4">더블클릭</button>
+    <button id="button5">포인터 들어옴</button>
+    <button id="button6">포인터나감</button>
+    <div id="res"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+        $("#button4").on("dblclick", function() {
+            $("#res").tex("더블클릭");
+        });
 
-    //jquery
-    
+        $("#button3").contextmenu(function() {
+            $("#res").text("3번 버튼 오른쪽 클릭됨");
+        });
 
-    //18번과 똑같은 것을 만들어라
-    // addEventListener를 이용해서ㄴ
-    //보통의 자바스크립트 코드 (vanilla javascript)
-    document.querySelector("#input1").addEventListener("keyup", function(e) {
-        if (e.key === "Enter") {
-            let li = document.createElement("li");
-            li.textContent = this.value;
-            document.querySelector("#list1").append(li);
-            this.value = "";
-        }
-    });
+        $("#button1").on("click", function() {
+            $("#res").text("1번클릭됨");
+        });
+
+        $("#button2").click(function() {
+            $("#res").text("2번 클릭됨");
+        });
+
+        $("button5").mouseenter(function() {
+            $("#res").text("포인터 들어옴");
+        });
+
+        $("button6").mouseout(function() {
+            $("#res").text("포인터 나감");
+        });
+
+        //코드 이상함 ㅎ
+        
     </script>
 </body>
 </html>

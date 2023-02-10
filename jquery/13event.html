@@ -9,32 +9,33 @@
     </style>
 </head>
 <body>
-    <input type="text" id="input1">
-    <ul id="list1"></ul>
+    <h1>
+        Lorem.
+    </h1>
 
-    <hr>
-
-    <input type="text" id="input2">
-    <ul id="list2"></ul>
-
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint necessitatibus iusto earum natus incidunt obcaecati omnis tempore, dolorem velit, unde, est ducimus quidem dicta eum et rerum quam pariatur corporis!
+    </p>
+<!-- 여기에 onclick을 사용하면 유지보수하기 힘드니까 밑에 적는게 좋다 -->
+    <h2>
+        Lorem, ipsum.
+    </h2>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-
-    //jquery
     
-
-    //18번과 똑같은 것을 만들어라
-    // addEventListener를 이용해서ㄴ
-    //보통의 자바스크립트 코드 (vanilla javascript)
-    document.querySelector("#input1").addEventListener("keyup", function(e) {
-        if (e.key === "Enter") {
-            let li = document.createElement("li");
-            li.textContent = this.value;
-            document.querySelector("#list1").append(li);
-            this.value = "";
-        }
+    $("h1").on("click", function() {
+        console.log("h1 클릭");
     });
+
+    $("p").on("click", function() {
+        console.log("p 클릭");
+    })
+
+    $("h2").on("click", function() {
+        console.log("h2 클릭");
+        prompt("갑자기 보여줌", "짜잔");
+    })
     </script>
 </body>
 </html>

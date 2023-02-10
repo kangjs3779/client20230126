@@ -9,32 +9,25 @@
     </style>
 </head>
 <body>
-    <input type="text" id="input1">
-    <ul id="list1"></ul>
-
-    <hr>
-
-    <input type="text" id="input2">
-    <ul id="list2"></ul>
-
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-grid">
+                    <button onclick="slideContent();" class="btn btn-primary">슬라이드효과</button>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="content1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iste magni vero deserunt sequi debitis soluta reiciendis officiis minima laborum modi commodi, nostrum, molestias adipisci ut ad, facilis iusto error.
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+    function slideContent() {
+        $("#content1").slideToggle();
 
-    //jquery
-    
-
-    //18번과 똑같은 것을 만들어라
-    // addEventListener를 이용해서ㄴ
-    //보통의 자바스크립트 코드 (vanilla javascript)
-    document.querySelector("#input1").addEventListener("keyup", function(e) {
-        if (e.key === "Enter") {
-            let li = document.createElement("li");
-            li.textContent = this.value;
-            document.querySelector("#list1").append(li);
-            this.value = "";
-        }
-    });
+    }
     </script>
 </body>
 </html>

@@ -9,32 +9,27 @@
     </style>
 </head>
 <body>
-    <input type="text" id="input1">
-    <ul id="list1"></ul>
-
-    <hr>
-
-    <input type="text" id="input2">
-    <ul id="list2"></ul>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-
-    //jquery
-    
-
-    //18번과 똑같은 것을 만들어라
-    // addEventListener를 이용해서ㄴ
-    //보통의 자바스크립트 코드 (vanilla javascript)
-    document.querySelector("#input1").addEventListener("keyup", function(e) {
-        if (e.key === "Enter") {
-            let li = document.createElement("li");
-            li.textContent = this.value;
-            document.querySelector("#list1").append(li);
-            this.value = "";
+    function a() {
+        return {
+            name: "son",
+            val: function () {
+                return "soccer";
+            }
         }
-    });
+    }
+
+    a(); //호출을 해야 함수가 실행이 된다
+    //영문 대소문자, $, _, 숫자 = 함수명 작성 규칙
+    //관습에 따라 lowerCamelCase로 작명하는 것이 좋음
+    //제이쿼리는 자바스크립트에 잘 만들어진 함수이다
+    //함수로 묶어서 실행 시킨다고 생각하면 된다
+
+    a().name;
+    console.log(a().name);
+    console.log(a().val());
     </script>
 </body>
 </html>

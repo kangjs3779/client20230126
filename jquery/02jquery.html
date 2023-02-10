@@ -9,32 +9,31 @@
     </style>
 </head>
 <body>
-    <input type="text" id="input1">
-    <ul id="list1"></ul>
-
-    <hr>
-
-    <input type="text" id="input2">
-    <ul id="list2"></ul>
+    <h1 id="head1">
+        Lorem.
+    </h1>
+    <h1 id="head2">
+        Explicabo.
+    </h1>
+    <h1 id="head3">
+        Autem.
+    </h1>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+    let a = $();
+    console.log(a);
+    //$함수를 어떻게 사용하는지 볼 것이다
 
-    //jquery
-    
+    let b = $("#head1");
+    console.log(b);
 
-    //18번과 똑같은 것을 만들어라
-    // addEventListener를 이용해서ㄴ
-    //보통의 자바스크립트 코드 (vanilla javascript)
-    document.querySelector("#input1").addEventListener("keyup", function(e) {
-        if (e.key === "Enter") {
-            let li = document.createElement("li");
-            li.textContent = this.value;
-            document.querySelector("#list1").append(li);
-            this.value = "";
-        }
-    });
+    b.remove();
+    //DOM에서 요소를 삭제하는 메소드이다
+    //개발자도구에서 보면 제일 상단에 있는 h1은 사라져있음을 확인할 수 있다
+
     </script>
 </body>
 </html>
+

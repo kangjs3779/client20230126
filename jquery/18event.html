@@ -9,32 +9,51 @@
     </style>
 </head>
 <body>
-    <input type="text" id="input1">
-    <ul id="list1"></ul>
+    <p>
+        Lorem ipsum dolor sit amet.
+    </p>
+    <p>
+        Minus hic at distinctio rem!
+    </p>
+    <p>
+        Perferendis eligendi illo accusamus qui.
+    </p>
+    <p>
+        Distinctio itaque repellat a dolores.
+    </p>
+    <p>
+        Rem ex molestias cupiditate totam.
+    </p>
+    <p>
+        Distinctio sit hic aspernatur eius!
+    </p>
+    <p>
+        Illum maxime voluptatibus laboriosam corrupti.
+    </p>
+    <p>
+        Quisquam assumenda alias modi quasi.
+    </p>
+    <p>
+        Possimus aut beatae quo illo.
+    </p>
+    <p>
+        Eum non repellat unde repudiandae.
+    </p>
 
-    <hr>
-
-    <input type="text" id="input2">
-    <ul id="list2"></ul>
-
+    <button>클릭</button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+        //p요소가 클릭되면 클릭된 p요소가 fadeout이 되도록
+        $("p").on("click", function() {
+            $(this).fadeOut(1000);
+        })
 
-    //jquery
-    
-
-    //18번과 똑같은 것을 만들어라
-    // addEventListener를 이용해서ㄴ
-    //보통의 자바스크립트 코드 (vanilla javascript)
-    document.querySelector("#input1").addEventListener("keyup", function(e) {
-        if (e.key === "Enter") {
-            let li = document.createElement("li");
-            li.textContent = this.value;
-            document.querySelector("#list1").append(li);
-            this.value = "";
-        }
-    });
+        
+        //button이 클릭되면 모든 p요소가 fadeIn 되도록
+        $("button").on("click", function() {
+            $("p").fadeIn(1000);
+        })
     </script>
 </body>
 </html>
