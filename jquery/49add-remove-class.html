@@ -9,20 +9,22 @@
     </style>
 </head>
 <body>
-    <ul id="list1">
-        
-    </ul>
+    <div class="fa-10px">
+        <i class="fa-solid fa-basketball" id="icon1"></i>
+    </div>
 
+    <button id="button1">start</button>
+    <button id="button2">stop</button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        let a = prompt("아무거나 입력하세요", "아무거나");
-        let b = document.createElement("li");
-        b.textContent = a;
-        
-        document.querySelector("#list1").append(b);
-        
-    
+    $("#button1").click(function() {
+        $("#icon1").addClass("fa-bounce");
+    })
 
+    $("#button2").click(function() {
+        $("#icon1").removeClass("fa-bounce")
+    })
     </script>
 </body>
 </html>

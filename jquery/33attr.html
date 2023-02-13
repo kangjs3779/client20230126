@@ -9,20 +9,33 @@
     </style>
 </head>
 <body>
-    <ul id="list1">
-        
-    </ul>
-
+    <div>
+        <a href="https://www.daum.net" id="link1">
+            Lorem.
+        </a>
+    </div>
+    <div>
+        <a href="" id="link2">
+            Et.
+        </a>
+    </div>
+    <div>
+        <a href="" id="link3">
+            Deleniti?
+        </a>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        let a = prompt("아무거나 입력하세요", "아무거나");
-        let b = document.createElement("li");
-        b.textContent = a;
-        
-        document.querySelector("#list1").append(b);
-        
-    
+        console.log($("#link1").attr("href"));
 
+        $("#link2").attr("href","http://www.naver.com");        
+        //한개 넣으면 읽는 것이고 두개 넣으면 셋팅하는 거다
+
+        //#link3 요소의 href 속성 변경
+        $("#link3").attr("href","http://www.google.com");
+        //바뀐지 확인하려면 개발자도구에서 요소에 들어가면 확인할 수 있다
+    
     </script>
 </body>
 </html>

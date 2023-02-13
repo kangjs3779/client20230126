@@ -9,20 +9,29 @@
     </style>
 </head>
 <body>
-    <ul id="list1">
-        
-    </ul>
+    <div id="res1">
+        내용만 추가.
+    </div>
+    <div id="res2">
+        태그까지 추가
+    </div>
+    <div id="res3">
+        Expedita?
+    </div>
+    #res4
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        let a = prompt("아무거나 입력하세요", "아무거나");
-        let b = document.createElement("li");
-        b.textContent = a;
-        
-        document.querySelector("#list1").append(b);
-        
-    
+        $("#res1").append("world");
+        $("#res2").append("<h1>hi</h1>") //온전한 태그를 써줘야하나보다
 
+        let a = document.createElement("h2");
+        a.textContent = "world";
+        $("#res3").append(a);
+
+        let h3elem = $("<h3>hello h3</h3>");
+        $("#res4").append(h3elem);    
     </script>
 </body>
 </html>

@@ -9,19 +9,31 @@
     </style>
 </head>
 <body>
-    <ul id="list1">
-        
-    </ul>
-
+    <h1 id="head1">
+        1.
+    </h1>
+    <h1 id="head2">
+        2.
+    </h1>
+    <h1 id="head3">
+        3?
+    </h1>
+    <h1 id="head4">
+        4!
+    </h1>
+    <h1 id="head5">
+        5!
+    </h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        let a = prompt("아무거나 입력하세요", "아무거나");
-        let b = document.createElement("li");
-        b.textContent = a;
-        
-        document.querySelector("#list1").append(b);
-        
-    
+        $("#head1").before("hello");
+        $("#head2").before("<p>world</p>");
+        $("#head3").before("<p>css</p><p>html</p>");
+
+        let para = $("<p />") //p요소를 만들고
+        para.text("spring"); //내용은 spring으로 하고
+        $("#head4").before(para); //head4 전에 만든 요소 붙이겠다
 
     </script>
 </body>

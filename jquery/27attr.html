@@ -9,19 +9,33 @@
     </style>
 </head>
 <body>
-    <ul id="list1">
-        
-    </ul>
-
+    <a href="www.naver.com" id="link1" target="_blank">
+        Lorem.
+    </a>
+    <a href="www.daum.net" id="link2" title="네이버링크">
+        Sed?
+    </a>
+    <a href="www.google.com" id="link3">
+        Asperiores.
+    </a>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        let a = prompt("아무거나 입력하세요", "아무거나");
-        let b = document.createElement("li");
-        b.textContent = a;
-        
-        document.querySelector("#list1").append(b);
-        
-    
+    //attribute의 정보를 얻고 싶을 때
+    let attr1 = $("#link1").attr("href");
+    //link1이라는 아이디의 요소에 href라는 속성을 return하는 것
+    console.log(attr1);
+
+    console.log($("#link2").attr("href"));
+    console.log($("#link3").attr("href"));
+
+    //#link1 요소의 target 속성 값 출력
+    let a = $("#link1").attr("target");
+    console.log(a);
+
+    //#link2 요소의 title 속성 값 출력
+    let b = $("#link2").attr("title");
+    console.log(b);
 
     </script>
 </body>
