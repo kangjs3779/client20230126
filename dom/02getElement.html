@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    </style>
+</head>
+<body>
+    <h1 id="head1">
+        Lorem.
+    </h1> 
+    <!-- 얜 객체가 되었다 브라우저상에서 -->
+    <h1 id="head2">
+        Voluptatibus!
+    </h1>
+    <h1 id="head3">
+        Magni?
+    </h1>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    let o1 = document.getElementById("head1");
+    //객체 안에있는 함수라서 method임 get~~ 얘는 기능이 있는애임 내가 이름을 붙여준게 아님
+    //객체를 document를 통해서 얻어옴
+    console.log(o1.textContent); //text~~는 property - 함수를 사용하지 않음
+
+    o1.textContent = "hello DOM"; //property 값을 변경함
+
+    o1.remove(); //돔에서 삭제되는 일을 한다
+
+    let o2 = document.getElementById("head2");
+    o2.textContent = "javascript";
+    //document라는 최상위 요소를 통해서 자손 요소에 접근을 하겠음
+    //get~~는 요소의 아이디 값을 통해서 그 요소에 접근을 하겠다("아이디명")
+    //이 접근하는 것을 o2라는 이름을 주겠다
+    //o2라는 애를 불러서 text~~라는 property를 실행 하겠다
+    //text~~는 내가 쓴 값으로 대체할 수 있도록 해준다 원래 있던 텍스트는 삭제된다/ 또는 읽는다
+
+    //아이디가 head3인 요소의 텍스트 콘텐트를 바꾸기
+    let o3 = document.getElementById("head3");
+    o3.textContent = "안녕하세요";
+
+    </script>
+</body>
+</html>

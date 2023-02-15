@@ -12,41 +12,22 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    let a = "java";
-    let b = "html";
-    let c = "css";
-    let d = "javascript";
-    let e = "react";
+    
+    a(); //함수가 작성되기 이전에도 실행 가능하다
+    //경우에 따라 다름
+    console.log(123);
 
-    console.log(a);
-    console.log(b);
-    console.log(c);
-    console.log(d);
-    console.log(e);
-
-    //array : 여러 값을 저장한 자료형
-    console.log("########");
-    let f = ["java", "css", "html", "vue", "react"];
-
-    for (let i = 0; i < f.length; i++) {
-        console.log(f[i]);
+    function a() {
+        console.log("abc");
+        console.log("def");
     }
 
-    let g = [3, "css", true, 3.14, null]
-    //백줄이든 천줄이든 간단하게 쓸 수 있다
-    //타입에 민감하지 않다. 타입 구분 없이 값을 가질 수 있다
-    //배열의 item 또는 element들이다
-    //for문과 궁합이 잘 맞다
+    console.log(456);
 
-    //빈배열
-    let h = [];
-
-    //코드가 길면 각 값 앞에서 새로운 줄 입력
-    let i = [
-        "javascript", 
-        "html은 페이지의 구조를 나타낸다.",
-        "css는 html요소를 꾸며주는 역할을 한다"
-    ];
+    a(); //특별한 경우가 아니라면 함수 정의 후에 실행 코드 작성
+    a();
+    a();
+    //여러번 실행 가능
     </script>
 </body>
 </html>

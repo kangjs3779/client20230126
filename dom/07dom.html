@@ -9,27 +9,34 @@
     </style>
 </head>
 <body>
-
+    <h1>
+        Lorem.
+    </h1>
+    <h1>
+        Hic?
+    </h1>
+    <div id="res"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    // 변수의 scope(범위)
-
-    // let, const의 scope은 (var는 범위가 다르니까 왠만하면 쓰지말라)
-    // 선언된 코드블럭 내 
-    // --> 즉, 코드블럭 내에서만 사용 가능
-
-    let a = 5;
+    let heads = document.querySelectorAll("h1");
+    let text = "";
     
-    if (true) {
-        let b = 10;
-
-        console.log("a", a);
-        console.log("b", b);
+    for (let i = 0; i < heads.length; i++) {
+        text += heads[i].textContent;
     }
-    //b는 코드 블럭 내에서만 사용 가능 한다
+    // 반복문 사용 할거야
+    // i라는 애를 만들어서 0부터 시작을 할거야
+    // i는 heads라는애의 배열 길이보다 작을 때까지만 반복할거야
+    // 그리고 그때까지는 1씩더해줄거야
+    // 그리고 그떄까지 반복할 때마다 text랑 heads의 배열아이템을 더해줄거야
+    
+    document.getElementById("res").textContent = text;
+    //위에 있는 반복문을 브라우저에 보여주고싶어
+    //document를 통해서 자손요소에 접근할거야
+    //그리고 아이디를 통해서 특정요소에 접근할거야 근데 get이라서 css언어 못써
+    //그리고 textContent로 브라우저에 출력할거야
+    //뭘 출력할거냐면 text를 출력할건데 그건 반복을 한 값을 말하는 거야
 
-    console.log("a", a); //출력 된다
-    console.log("b", b); // 코드 블럭 안에서 선언이 되어 있으므로 출력이 안된다.
     </script>
 </body>
 </html>

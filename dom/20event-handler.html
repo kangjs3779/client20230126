@@ -9,27 +9,32 @@
     </style>
 </head>
 <body>
+    <input type="text" id="input1">
+    <ul id="list1"></ul>
+
+    <hr>
+
+    <input type="text" id="input2">
+    <ul id="list2"></ul>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    // 변수의 scope(범위)
 
-    // let, const의 scope은 (var는 범위가 다르니까 왠만하면 쓰지말라)
-    // 선언된 코드블럭 내 
-    // --> 즉, 코드블럭 내에서만 사용 가능
-
-    let a = 5;
+    //jquery
     
-    if (true) {
-        let b = 10;
 
-        console.log("a", a);
-        console.log("b", b);
-    }
-    //b는 코드 블럭 내에서만 사용 가능 한다
-
-    console.log("a", a); //출력 된다
-    console.log("b", b); // 코드 블럭 안에서 선언이 되어 있으므로 출력이 안된다.
+    //18번과 똑같은 것을 만들어라
+    // addEventListener를 이용해서ㄴ
+    //보통의 자바스크립트 코드 (vanilla javascript)
+    document.querySelector("#input1").addEventListener("keyup", function(e) {
+        if (e.key === "Enter") {
+            let li = document.createElement("li");
+            li.textContent = this.value;
+            document.querySelector("#list1").append(li);
+            this.value = "";
+        }
+    });
     </script>
 </body>
 </html>
