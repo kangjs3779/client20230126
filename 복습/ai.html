@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>가위바위보 게임</title>
+</head>
+<body>
+	<h1>가위바위보 게임</h1>
+	
+	<button id="rock">바위</button>
+	<button id="scissors">가위</button>
+	<button id="paper">보</button>
+	
+	<p id="result"></p>
+	
+	<script>
+		// 버튼 클릭 이벤트 핸들러
+		document.getElementById("rock").addEventListener("click", playGame);
+		document.getElementById("scissors").addEventListener("click", playGame);
+		document.getElementById("paper").addEventListener("click", playGame);
+		
+		// 게임 실행 함수
+		function playGame(event) {
+			// 사용자의 선택
+			var userChoice = event.target.id;
+			
+			// 컴퓨터의 선택
+			var computerChoice = Math.floor(Math.random() * 3);  // 0, 1, 2 중 하나 선택
+			if (computerChoice === 0) {
+				computerChoice = "rock";
+			} else if (computerChoice === 1) {
+				computerChoice = "scissors";
+			} else {
+				computerChoice = "paper";
+			}
+			
+			// 결과 판정
+			var result = "";
+			if (userChoice === computerChoice) {
+				result = "비겼습니다!";
+			} else if (userChoice === "rock" && computerChoice === "scissors" ||
+					   userChoice === "scissors" && computerChoice === "paper" ||
+					   userChoice === "paper" && computerChoice === "rock") {
+				result = "이겼습니다!";
+			} else {
+				result = "졌습니다!";
+			}
+			
+			// 결과 출력
+			document.getElementById("result").innerHTML = "컴퓨터의 선택은 " + computerChoice + "입니다. " + result;
+		}
+	</script>
+</body>
+</html>
